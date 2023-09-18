@@ -1,1 +1,1 @@
-# odin-landing-page | [Live View]("")
+# odin-landing-page | [Live Preview](https://mukesh-se.github.io/odin-landing-page/)
