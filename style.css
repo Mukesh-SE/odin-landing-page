@@ -85,7 +85,6 @@ ul.navbar {
 main {
 	width: 100%;
 	height: 90vh;
-	background-color: var(--clr-1);
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -196,7 +195,7 @@ main > div {
 /* section */
 /*  Featured Products: */
 
-section.Featured-Products {
+.Featured-Products {
 	padding: 15px;
 	width: 100%;
 	/* height: 50vh; */
@@ -212,48 +211,42 @@ section.Featured-Products {
 	}
 }
 
-.Featured-Products .products-container {
+.products-container {
 	width: 100%;
-	/* height: 100%; */
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
 	place-items: center;
-
-	.product {
-		padding-bottom: 10px;
-		width: 300px;
-		height: 450px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		overflow: hidden;
-		border-radius: 10px;
-		background-color: var(--secondary);
-	}
 }
 
 .product {
+	padding-bottom: 10px;
+	width: 300px;
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 10px;
+	background-color: var(--secondary);
 	& img {
 		width: 100%;
 		height: 50%;
 	}
-
-	.product-info {
-		margin: 5px;
-		padding: 0 10px;
-		height: 50%;
-		color: var(--clr-2);
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: end;
-		text-align: left;
-	}
 }
 
 .product-info {
+	margin: 5px;
+	padding: 0 10px;
+	height: 50%;
+	color: var(--clr-2);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: end;
+	text-align: left;
+
 	.name-and-price {
 		width: 100%;
 		display: flex;
@@ -317,4 +310,99 @@ footer {
 	display: grid;
 	place-items: center;
 	color: var(--clr-2);
+}
+
+/* responsive */
+
+@media (max-width: 786px) {
+	nav {
+		& .log {
+			font-size: 2rem;
+		}
+	}
+	.navbar {
+		column-gap: 10px;
+		& li > a {
+			font-size: 01rem;
+		}
+	}
+	main {
+		& .hero-banner > h1 {
+			font-size: 1.8rem;
+			line-height: 1.3;
+		}
+
+		& .hero-banner > p {
+			font-size: 1rem;
+		}
+
+		& .hero-banner button {
+			padding: 4px 12px;
+			font-size: 1rem;
+		}
+
+		& .hero-image {
+			height: 40%;
+		}
+	}
+	.products-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 640px) {
+	.log {
+		display: none;
+	}
+
+	main {
+		height: 60vh;
+
+		& .hero-banner h1 {
+			font-size: 1.2rem;
+		}
+		& .hero-banner p {
+			font-size: 0.8rem;
+		}
+	}
+	.Featured-Products h1 {
+		font-size: 1.5rem;
+	}
+	.product {
+		width: 250px;
+		height: 360px;
+
+		.name-and-price {
+			font-size: 0.9rem;
+			& h2 {
+				font-size: 1rem;
+			}
+		}
+		.desc {
+			font-size: 0.9rem;
+		}
+
+		& button {
+			padding: 4px 12px;
+			font-size: 1rem;
+		}
+	}
+
+	.Newsletter-headings {
+		& h1 {
+			font-size: 1rem;
+		}
+		& p {
+			font-size: 0.9rem;
+		}
+	}
+	.Newsletter {
+		& button {
+			font-size: 0.8rem;
+		}
+	}
+
+	.footer {
+		font-size: 1.5rem;
+	}
 }
