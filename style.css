@@ -406,3 +406,71 @@ footer {
 		font-size: 1.5rem;
 	}
 }
+
+@media (max-width: 480px) {
+	main {
+		height: 45vh;
+
+		& .hero-banner h1 {
+			font-size: 1.2rem;
+		}
+		& .hero-banner p {
+			font-size: 0.8rem;
+		}
+	}
+	.hero-banner {
+		min-width: 80%;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-image {
+		display: none;
+	}
+
+	.Featured-Products h1 {
+		font-size: 1.2rem;
+	}
+	.product {
+		width: 200px;
+		height: 300px;
+
+		.name-and-price {
+			font-size: 0.8rem;
+			& h2 {
+				font-size: 0.9rem;
+			}
+		}
+		.desc {
+			font-size: 0.8rem;
+		}
+
+		& button {
+			padding: 4px 10px;
+			font-size: 0.9rem;
+		}
+	}
+
+	.Newsletter-headings {
+		& h1 {
+			font-size: 0.9rem;
+		}
+		& p {
+			font-size: 0.75rem;
+		}
+	}
+	.newsletter-container {
+		height: 40vh;
+	}
+	.Newsletter {
+		& button {
+			padding: 4px 10px;
+			font-size: 0.75rem;
+		}
+	}
+
+	footer {
+		font-size: 1rem;
+	}
+}
