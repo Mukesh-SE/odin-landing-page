@@ -90,6 +90,40 @@ main {
 	align-items: center;
 	justify-content: space-evenly;
 	column-gap: 10px;
+
+	position: relative;
+	z-index: 10;
+
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		opacity: 0.8;
+		background: radial-gradient(
+			circle,
+			rgba(255, 0, 0, 0.164) 15%,
+			transparent 11%
+		);
+		background-size: 3em 3em;
+		background-position: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+	&::after {
+		content: "";
+		width: 100%;
+		height: 20vh;
+		background: linear-gradient(
+			0deg,
+			var(--body-bg),
+			rgba(255, 255, 255, 0.01)
+		);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
 }
 main > div {
 	width: 35vw;
@@ -108,7 +142,7 @@ main > div {
 	}
 	& p {
 		font-size: 1.3rem;
-		color: var(--tri);
+		color: var(--primary);
 	}
 
 	& button {
@@ -472,5 +506,78 @@ footer {
 
 	footer {
 		font-size: 1rem;
+	}
+}
+
+@media (max-width: 380px) {
+	.navbar {
+		column-gap: 10px;
+		& li > a {
+			font-size: 0.6rem;
+		}
+	}
+	main {
+		height: 35vh;
+
+		& .hero-banner h1 {
+			font-size: 0.9rem;
+		}
+		& .hero-banner p {
+			font-size: 0.7rem;
+		}
+	}
+	.hero-banner {
+		min-width: 70%;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-image {
+		display: none;
+	}
+
+	.Featured-Products h1 {
+		font-size: 0.9rem;
+	}
+	.product {
+		width: 160px;
+		height: 240px;
+		.name-and-price {
+			font-size: 0.6rem;
+			& h2 {
+				font-size: 0.75rem;
+			}
+		}
+		.desc {
+			font-size: 0.5rem;
+		}
+
+		& button {
+			padding: 2.5px 4px;
+			font-size: 0.9rem;
+		}
+	}
+
+	.Newsletter-headings {
+		& h1 {
+			font-size: 0.75rem;
+		}
+		& p {
+			font-size: 0.6rem;
+		}
+	}
+	.newsletter-container {
+		height: 30vh;
+	}
+	.Newsletter {
+		& button {
+			padding: 4px 10px;
+			font-size: 0.6rem;
+		}
+	}
+
+	footer {
+		font-size: 0.85rem;
 	}
 }
