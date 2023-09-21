@@ -540,6 +540,22 @@ footer {
 	.Featured-Products h1 {
 		font-size: 0.9rem;
 	}
+	.products-container {
+		display: grid;
+		grid-auto-flow: column;
+		/* grid-auto-columns: 20%; */
+		place-items: center;
+		column-gap: 10px;
+
+		/* scroll bar */
+		overflow-x: auto;
+		overscroll-behavior-inline: contain;
+		scroll-snap-type: inline mandatory;
+
+		& * {
+			scroll-snap-align: center;
+		}
+	}
 	.product {
 		width: 160px;
 		height: 240px;
