@@ -509,7 +509,7 @@ footer {
 	}
 }
 
-@media (max-width: 380px) {
+@media (min-width: 360px){
 	.navbar {
 		column-gap: 10px;
 		& li > a {
@@ -517,14 +517,16 @@ footer {
 		}
 	}
 	main {
-		height: 35vh;
-
+		flex: 1;
 		& .hero-banner h1 {
 			font-size: 0.9rem;
 		}
 		& .hero-banner p {
 			font-size: 0.7rem;
 		}
+	}
+	main > div {
+		height: 30vh;
 	}
 	.hero-banner {
 		min-width: 70%;
@@ -537,6 +539,9 @@ footer {
 		display: none;
 	}
 
+	.Featured-Products {
+		flex: 1;
+	}
 	.Featured-Products h1 {
 		font-size: 0.9rem;
 	}
@@ -575,6 +580,10 @@ footer {
 		}
 	}
 
+	.newsletter-container {
+		height: 30vh;
+	}
+
 	.Newsletter-headings {
 		& h1 {
 			font-size: 0.75rem;
@@ -582,9 +591,6 @@ footer {
 		& p {
 			font-size: 0.6rem;
 		}
-	}
-	.newsletter-container {
-		height: 30vh;
 	}
 	.Newsletter {
 		& button {
